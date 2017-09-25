@@ -71,7 +71,7 @@
                                 <button (click)="remove(item)" class="btn btn-danger">x</button>
                             </td>
                             <td>{{item.uid}}</td>
-                            <td>{{item.name}}</td>
+                            <td><a [routerLink]="['/pages/testCase/testCaseDetail', item.uid]">{{item.name}}</a></td>
                             <td>{{item.status}}</td>
                             <td class="text-right">{{item.createdTime}}</td>
                         </tr>

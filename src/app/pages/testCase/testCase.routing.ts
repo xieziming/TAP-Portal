@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
       { path: 'testCaseList', component: TestCaseList },
       { path: 'testCaseAnalytics', component: TestCaseAnalytics },
-      { path: 'testCaseDetail', component: TestCaseDetail },
+      { path: 'testCaseDetail/:uid', component: TestCaseDetail },
     ],
   },
 ];

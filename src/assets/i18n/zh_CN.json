@@ -53,6 +53,7 @@
       "external_link": "External Link",
       "testCase": "测试用例",
       "testCaseList": "用例列表",
+      "testCaseDetail": "用例详情",
       "testCaseAnalytics": "用例分析"
     },
     "created_with": "T A P"

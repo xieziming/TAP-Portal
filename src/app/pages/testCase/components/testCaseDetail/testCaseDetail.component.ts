@@ -1,28 +1,31 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { JsonEditorComponent, JsonEditorOptions } from 'tap-json-editor';
 import { TestCaseDetailService } from './testCaseDetail.service';
+
 @Component({
   selector: 'test_case_detail',
   templateUrl: './testCaseDetail.html',
 })
 
 export class TestCaseDetail {
-  public editorOptions: JsonEditorOptions;
-  public data: any;
-  constructor(private service: TestCaseDetailService) {
-    this.editorOptions = new JsonEditorOptions();
-  }
+  editorOptions: JsonEditorOptions = new JsonEditorOptions();
+  uid: string;
+  @ViewChild(JsonEditorComponent)
+  editor: JsonEditorComponent;
 
-  @ViewChild(JsonEditorComponent) editor: JsonEditorComponent;
+  constructor(private service: TestCaseDetailService, private route: ActivatedRoute) {
+    this.editorOptions.schema = {
+        $ref: "assets/schemas/testcase_schema.json",
+        format: "grid"
+    };
+    this.editorOptions.ajax = true;
+  }
 
   ngOnInit() {
-    this.service.getTestCaseDetail().then((data) => {
-      this.editor.set(data);
-      //this.data = data;
+    this.uid = this.route.snapshot.params['uid'];
+    this.service.getTestCaseDetail(this.uid).then((data) => {
+       this.editor.set(data);
     });
-  }
-
-  public setTreeMode() {
-    this.editor.setMode('tree');
   }
 }

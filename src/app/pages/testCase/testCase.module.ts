@@ -14,6 +14,7 @@ import { TestCaseListService } from './components/testCaseList/testCaseList.serv
 import { TestCaseAnalyticsService } from './components/testCaseAnalytics/testCaseAnalytics.service';
 import { AppTranslationModule } from '../../app.translation.module';
 import { TestCaseDetailService } from './components/testCaseDetail/testCaseDetail.service';
+import { JsonEditorModule } from 'tap-json-editor';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { TestCaseDetailService } from './components/testCaseDetail/testCaseDetai
     FormsModule,
     NgaModule,
     ROUTING,
+    JsonEditorModule,
     DataTableModule,
     HttpModule,
     AppTranslationModule,
