@@ -17,7 +17,7 @@
     "rimraf": "rimraf",
     "changelog": "standard-changelog",
     "start": "ng serve",
-    "start:hmr": "ng serve --host 0.0.0.0 --port 8090 --hmr",
+    "start:hmr": "ng serve --host 0.0.0.0 --hmr",
     "start:aot": "ng serve --aot",
     "start:prod": "ng serve --prod",
     "start:prod:aot": "ng serve --prod --aot",

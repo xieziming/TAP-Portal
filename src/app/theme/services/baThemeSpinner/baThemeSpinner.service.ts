@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class BaThemeSpinner {
 
-  private _selector:string = 'preloader';
-  private _element:HTMLElement;
+  private _selector: string = 'preloader';
+  private _element: HTMLElement;
 
   constructor() {
     this._element = document.getElementById(this._selector);

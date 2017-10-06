@@ -36,7 +36,7 @@
     },
     "testCaseMetas": {
       "type": "array",
-      "format": "grid",
+      "format": "table",
       "title": "Metas",
       "items": {
         "type": "object",
@@ -61,7 +61,7 @@
     },
     "testCaseTags": {
       "type": "array",
-      "format": "grid",
+      "format": "table",
       "title": "Tags",
       "items": {
         "type": "object",
@@ -83,7 +83,7 @@
     },
     "testSteps": {
       "type": "array",
-      "format": "grid",
+      "format": "table",
       "title": "Steps",
       "items": {
         "type": "object",
@@ -112,7 +112,7 @@
     },
     "testDatas": {
       "type": "array",
-      "format": "grid",
+      "format": "table",
       "title": "Test Data",
       "items": {
         "type": "object",

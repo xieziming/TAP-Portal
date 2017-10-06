@@ -16,8 +16,9 @@ export class TestCaseDetail {
 
   constructor(private service: TestCaseDetailService, private route: ActivatedRoute) {
     this.editorOptions.schema = {
-        $ref: "assets/schemas/testcase_schema.json",
-        format: "grid"
+        $ref: 'assets/schemas/testcase_schema.json',
+        format: 'grid',
+        disable_properties: 'true'
     };
     this.editorOptions.ajax = true;
   }
