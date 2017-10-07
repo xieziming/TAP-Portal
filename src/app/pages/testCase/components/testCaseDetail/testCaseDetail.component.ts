@@ -5,7 +5,7 @@ import { TestCaseDetailService } from './testCaseDetail.service';
 
 @Component({
   selector: 'test_case_detail',
-  templateUrl: './testCaseDetail.html',
+  templateUrl: './testCaseDetail.html'
 })
 
 export class TestCaseDetail {
